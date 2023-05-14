@@ -1,11 +1,10 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Edición 2023 — «Tecnología»',
+    description: `Escribí tu ensayo sobre el tema "TECNOLOGÍA" y sumá tu reflexión a la de otros alumnos del país.
+    Pueden participar todos los estudiantes de 4to, 5to y 6to de bachillerato con la asesoría de un profesor.`,
+    imgSrc: '/static/images/banner_short.png',
+    href: 'https://um.edu.uy/facultad-de-humanidades-y-educacion/premio-ensayo',
   },
   {
     title: 'The Time Machine',

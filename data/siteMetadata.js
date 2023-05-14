@@ -2,24 +2,23 @@
 
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
-  language: 'en-us',
+  title: 'Premio de Ensayo Humanístico',
+  author: ' Universidad de Montevideo',
+  headerTitle: '',
+  description:
+    'Blog dedicado a la difusión del Premio de Ensayo Humanístico, organizado por la Facultad de Humanidades y Educación de la Universidad de Montevideo',
+  language: 'es-uy',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
-  siteLogo: '/static/images/logo.png',
+  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app', // TODO: Update with deployment URL
+  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog', // TODO: Update with repo URL
+  github: '', // TODO: Update with repo
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  locale: 'en-US',
+  siteLogo: '/static/images/logo.png',
+  socialBanner: '/static/images/banner.png',
+  email: 'humanidades@um.edu.uy', // TODO: Update with UM email
+  twitter: 'https://twitter.com/HumanidadesUM',
+  linkedin: 'https://www.linkedin.com/school/universidad-de-montevideo_/',
+  locale: 'es-UY',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
