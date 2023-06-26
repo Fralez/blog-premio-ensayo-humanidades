@@ -31,7 +31,20 @@ module.exports = {
         sans: ['Inter', ...fontFamily.sans],
       },
       colors: {
-        primary: colors.teal,
+        // TODO: Add real palette of the `primary` color according to the UM graphic identity (either we don't have access to that or it doesn't exist).
+        primary: {
+          50: '#00a2e8',
+          100: '#00a2e8',
+          200: '#00a2e8',
+          300: '#00a2e8',
+          400: '#00a2e8',
+          500: '#00a2e8',
+          600: '#00a2e8',
+          700: '#00a2e8',
+          800: '#00a2e8',
+          900: '#00a2e8',
+          950: '#00a2e8',
+        },
         gray: colors.neutral,
       },
       typography: (theme) => ({

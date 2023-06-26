@@ -37,6 +37,28 @@ const computedFields: ComputedFields = {
   toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
 }
 
+// TODO: Figure out how to remove this document type and still be able to place `bibliography.mdx` outside the `blog/` directory (i.e. learn how to use contentlayer).
+// Also: potentially remove the `essay-awards/` directory from the `blog/` one.
+export const Document = defineDocumentType(() => ({
+  name: 'Blog',
+  filePathPattern: '*.mdx',
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    date: { type: 'date', required: true },
+    tags: { type: 'list', of: { type: 'string' } },
+    lastmod: { type: 'date' },
+    draft: { type: 'boolean' },
+    summary: { type: 'string' },
+    images: { type: 'list', of: { type: 'string' } },
+    authors: { type: 'list', of: { type: 'string' } },
+    layout: { type: 'string' },
+    bibliography: { type: 'string' },
+    canonicalUrl: { type: 'string' },
+  },
+  computedFields,
+}))
+
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
   filePathPattern: 'blog/**/*.mdx',
@@ -75,7 +97,7 @@ export const Authors = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors],
+  documentTypes: [Document, Blog, Authors],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [

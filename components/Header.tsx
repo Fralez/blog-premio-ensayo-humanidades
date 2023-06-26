@@ -1,9 +1,9 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import Logo from '@/data/logo-simple.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
+// import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
   return (
@@ -25,7 +25,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center text-base leading-5">
-        <div className="hidden sm:block">
+        <div className="hidden sm:flex">
           {headerNavLinks.map((link) => (
             <Link
               key={link.title}
@@ -36,7 +36,8 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        <ThemeSwitch />
+        {/* TODO: Implement Dark Mode using the appropriate colour palette. Let it disabled in the meantime. */}
+        {/* <ThemeSwitch /> */}
         <MobileNav />
       </div>
     </header>

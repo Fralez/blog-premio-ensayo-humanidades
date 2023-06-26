@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
-import { NewsletterForm } from 'pliny/ui/NewsletterForm'
+import Image from 'next/image'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
 
@@ -23,13 +23,25 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+        <div className="relative space-y-2 pb-8 pt-6 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Premio de Ensayo Humanidades {`${new Date().getFullYear()}`}
+            Premio de Ensayo Humanístico {`${new Date().getFullYear()}`}
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+          <div className="relative h-60 w-full">
+            <Image
+              src="/static/images/essay-awards/current/banner.png"
+              className="w-full object-contain"
+              fill
+              alt="Latest essay awards banner"
+            />
+          </div>
+          {siteMetadata.description.split('\n\n').map((p, i) => {
+            return (
+              <p key={i} className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+                {p}
+              </p>
+            )
+          })}
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
