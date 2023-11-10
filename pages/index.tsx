@@ -29,12 +29,49 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </h1>
           <div className="relative h-60 w-full">
             <Image
-              src="/static/images/essay-awards/current/banner.png"
+              src="/static/images/essay-awards/2023/banner.png"
               className="w-full object-contain"
               fill
               alt="Latest essay awards banner"
             />
           </div>
+          <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+            Ganadores
+          </h2>
+          <h3 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-xl sm:leading-10 md:text-2xl md:leading-14">
+            1er puesto Filosofía
+          </h3>
+          <div className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            Juan Ignacio García Macció (Beata Imelda)
+            <p className="pt-4">
+              <a
+                target="_blank"
+                href="https://reporter.um.edu.uy/que-le-ha-hecho-la-tecnologia-a-nuestra-diversion/"
+                className="text-blue-600"
+                rel="noopener noreferrer"
+              >
+                ¿Qué le ha hecho la tecnología a nuestra diversión?
+              </a>
+            </p>
+          </div>
+          <h3 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-xl sm:leading-10 md:text-2xl md:leading-14">
+            1er puesto Historia
+          </h3>
+          <div className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            Micaela Garmendia Trías (Liceo Departamental de Maldonado)
+            <p className="pt-4">
+              <a
+                target="_blank"
+                href="https://reporter.um.edu.uy/la-tecnologia-en-constante-evolucion-aliada-o-adversaria-en-la-transformacion-de-nuestras-vidas/"
+                className="text-blue-600"
+                rel="noopener noreferrer"
+              >
+                La tecnología en constante evolución: ¿aliada o adversaria en la transformación de
+                nuestras vidas?
+              </a>
+            </p>
+          </div>
+          <hr className="h-px border-0 bg-gray-200 dark:bg-gray-700" />
           {siteMetadata.description.split('\n\n').map((p, i) => {
             return (
               <p key={i} className="text-lg leading-7 text-gray-500 dark:text-gray-400">

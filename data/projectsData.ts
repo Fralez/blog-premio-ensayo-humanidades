@@ -1,13 +1,11 @@
 const projectsData = [
-  // Hide current essay award edition
-  // {
-  //   title: 'Edición 2023 — «Tecnología»',
-  //   description: `Escribí tu ensayo sobre el tema "TECNOLOGÍA" y sumá tu reflexión a la de otros alumnos del país.
-  //   Pueden participar todos los estudiantes de 4to, 5to y 6to de bachillerato con la asesoría de un profesor.`,
-  //   imgSrc: '/static/images/essay-awards/current/flyer.jpg',
-  //   href: 'https://um.edu.uy/facultad-de-humanidades-y-educacion/premio-ensayo',
-  // },
-  // Previous essay awards:
+  {
+    title: 'Edición 2023 — «Tecnología»',
+    description: `Escribí tu ensayo sobre el tema "TECNOLOGÍA" y sumá tu reflexión a la de otros alumnos del país.
+    Pueden participar todos los estudiantes de 4to, 5to y 6to de bachillerato con la asesoría de un profesor.`,
+    imgSrc: '/static/images/essay-awards/2023/flyer.jpg',
+    href: '/blog/essay-awards/2023',
+  },
   {
     title: 'Edición 2022 - «Narración y Sentido»',
     description: `Edición del Premio de Ensayo Humanístico 2022 — «Narración y Sentido»`,
