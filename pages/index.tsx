@@ -2,12 +2,19 @@ import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { formatDate } from 'pliny/utils/formatDate'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
 import Image from 'next/image'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
+
+const postDateTemplate: Intl.DateTimeFormatOptions = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'Etc/UTC',
+}
 
 const MAX_DISPLAY = 5
 
@@ -29,47 +36,11 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </h1>
           <div className="relative h-60 w-full">
             <Image
-              src="/static/images/essay-awards/2023/banner.png"
+              src="/static/images/essay-awards/2024/banner.jpg"
               className="w-full object-contain"
               fill
               alt="Latest essay awards banner"
             />
-          </div>
-          <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
-            Ganadores
-          </h2>
-          <h3 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-xl sm:leading-10 md:text-2xl md:leading-14">
-            1er puesto Filosofía
-          </h3>
-          <div className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Juan Ignacio García Macció (Beata Imelda)
-            <p className="pt-4">
-              <a
-                target="_blank"
-                href="https://reporter.um.edu.uy/que-le-ha-hecho-la-tecnologia-a-nuestra-diversion/"
-                className="text-blue-600"
-                rel="noopener noreferrer"
-              >
-                ¿Qué le ha hecho la tecnología a nuestra diversión?
-              </a>
-            </p>
-          </div>
-          <h3 className="text-lg font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-xl sm:leading-10 md:text-2xl md:leading-14">
-            1er puesto Historia
-          </h3>
-          <div className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Micaela Garmendia Trías (Liceo Departamental de Maldonado)
-            <p className="pt-4">
-              <a
-                target="_blank"
-                href="https://reporter.um.edu.uy/la-tecnologia-en-constante-evolucion-aliada-o-adversaria-en-la-transformacion-de-nuestras-vidas/"
-                className="text-blue-600"
-                rel="noopener noreferrer"
-              >
-                La tecnología en constante evolución: ¿aliada o adversaria en la transformación de
-                nuestras vidas?
-              </a>
-            </p>
           </div>
           <hr className="h-px border-0 bg-gray-200 dark:bg-gray-700" />
           {siteMetadata.description.split('\n\n').map((p, i) => {
@@ -91,7 +62,14 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                     <dl>
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                        <div className="pr-4">
+                          <time dateTime={date}>
+                            {new Date(date).toLocaleDateString(
+                              siteMetadata.locale,
+                              postDateTemplate
+                            )}
+                          </time>
+                        </div>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">

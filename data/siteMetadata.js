@@ -8,7 +8,7 @@ const siteMetadata = {
   description: `
     El Premio UM de Ensayo Humanístico se inspira en la conciencia del valor de las humanidades para la formación de los jóvenes. La formación humanística ofrece una visión panorámica de la historia de las ideas y de los hechos, permitiendo comprender el pasado, explicar el presente y mejorar el futuro.
 
-    Las disciplinas convocadas para 2023 son Historia y Filosofía. En la 8ª edición, el tema marco será “Tecnología” y podrán participar alumnos de 4to, 5to y 6to de bachillerato. En las bases se describe con detalle el concurso.
+    Las disciplinas convocadas para 2023 son Historia y Filosofía. En la 9ª edición, el tema marco será “Educación” y podrán participar alumnos de 4to, 5to y 6to de bachillerato. En las bases se describe con detalle el concurso.
 
     Se trata de realizar un breve ensayo sobre las raíces históricas o filosóficas de los problemas actuales, con las eventuales alternativas de pensamiento o acciones futuras. Guiados por un docente, los alumnos deberán aplicar el tema marco a una temática concreta y hacer visible una reflexión o respuesta, incorporando nociones y teorías de las diversas disciplinas estudiadas.
 
