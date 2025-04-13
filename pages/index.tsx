@@ -34,9 +34,14 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Premio de Ensayo Humanístico {`${new Date().getFullYear()}`}
           </h1>
-          <div className="relative h-60 w-full">
+          <div
+            className="relative w-full"
+            style={{
+              height: '600px',
+            }}
+          >
             <Image
-              src="/static/images/essay-awards/2024/banner.jpg"
+              src={`/static/images/essay-awards/${new Date().getFullYear()}/banner.jpg`}
               className="w-full object-contain"
               fill
               alt="Latest essay awards banner"
